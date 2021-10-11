@@ -1,0 +1,167 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+.wave{
+    position: absolute;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
+    height: 143px;
+    bottom: 0;
+    left: 0;
+    background: url(wave.jpeg);
+    animation: wave 11s linear infinite;
+}
+@keyframes wave{
+    0%{
+    background-position: 0;
+    }
+    100%{
+     background-position: 1360px;
+    }
+}
+.wave::before{
+    content: "";
+    width: 100%;
+    height: 143px;
+    background: url(wave.jpeg);
+    position: absolute;
+    top: o;
+    left: 0;
+    animation: wave-reverse 11s linear infinite;
+    opacity: 0.3;
+}
+@keyframes wave-reverse{
+    0%{
+    background-position: 1360px;
+    }
+    100%{
+     background-position: 0;
+    }
+}
+.navbar{
+    overflow: hidden;
+    padding: 5px 7px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+}
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+     font-size: 1.4rem;
+} 
+nav ul li a:hover{
+    cursor: pointer;
+    color: grey;
+}
+#brdr{
+     border: 2px solid ;
+     padding: 15px;
+     margin: 10px;
+     width: 120px;
+     text-align: center;
+     border-radius: 50px;
+     background-color: orange;
+}
+#brdr:hover{
+    background-color: grey;
+    cursor: pointer;
+}
+#logo{
+    color: white;
+    font-size: 1.2rem;
+    display: inline-block;
+    padding: 15px;
+    position: fixed;
+    top: -7px;
+}   
+#cmnt{
+    color: white;
+    width: 450px;
+    position: relative;
+    bottom: -55px;
+    left: 100px;
+    font-size: 1.1rem;
+}
+#cmnt span{
+    color: orange;
+}
+#start{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+}
+#start::before{
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+    background-color: orange;
+    z-index: -1;
+    transition: all ease 0.5s;
+}
+#start:hover::before{
+    width: 100%;
+}
+/* .logo{
+     animation: rotation 50s linear infinite;
+} */
+
+.logo img {
+    position: absolute;
+    filter: invert(100%);
+    width: 70px;
+    border: 2px solid skyblue;
+    border-radius: 60%;
+    padding: 20px;
+    animation: rotation 50s linear infinite;
+}
+@keyframes rotation{
+    
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.logo img:nth-child(1){
+top:15%;
+left:63%;
+}
+.logo img:nth-child(2){
+top: 35%;
+left: 78%;
+}
+.logo img:nth-child(3){
+top: 60%;
+left: 73%;
+}
+.logo img:nth-child(4){
+    top: 60%;
+    left: 58%;
+}
+.logo img:nth-child(5){
+    top: 35%;
+    left: 52%;
+}
+
+.email{
+    filter: invert(100% );
+    width: 220px;
+    position: absolute;
+    top: 30%;
+    left: 60%;
+}
